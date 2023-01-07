@@ -12,9 +12,33 @@ const routes: Routes = [
     loadChildren: () => import('./pages/folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'controller',
-    loadChildren: () => import('./pages/controller/controller.module').then( m => m.ControllerPageModule)
+    path: 'definition',
+    loadChildren: () => import('./pages/definition/definition.module').then( m => m.DefinitionPageModule)
+  },
+  {
+    path: 'theory',
+    loadChildren: () => import('./pages/theory/theory.module').then( m => m.TheoryPageModule)
+  },
+  {
+    path: 'values',
+    loadChildren: () => import('./pages/values/values.module').then( m => m.ValuesPageModule)
+  },
+  {
+    path: 'team',
+    loadChildren: () => import('./pages/team/team.module').then( m => m.TeamPageModule)
+  },
+  {
+    path: 'events',
+    loadChildren: () => import('./pages/events/events.module').then( m => m.EventsPageModule)
+  },
+  {
+    path: 'artifacts/:id',
+    loadChildren: () => import('./pages/artifacts/artifacts.module').then( m => m.ArtifactsPageModule)
   }
+
+
+
+
 
 ];
 
