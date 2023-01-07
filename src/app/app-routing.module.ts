@@ -8,10 +8,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./pages/folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
     path: 'definition',
     loadChildren: () => import('./pages/definition/definition.module').then( m => m.DefinitionPageModule)
   },
@@ -32,7 +28,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/events/events.module').then( m => m.EventsPageModule)
   },
   {
-    path: 'artifacts/:id',
+    path: 'artifacts',
     loadChildren: () => import('./pages/artifacts/artifacts.module').then( m => m.ArtifactsPageModule)
   }
 
