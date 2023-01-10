@@ -1,7 +1,10 @@
 {
   "name": "DocApp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular",
   "id": "1fa222cc"
