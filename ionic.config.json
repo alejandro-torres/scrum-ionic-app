@@ -2,7 +2,7 @@
   "name": "DocApp",
   "integrations": {
     "capacitor": {
-      "enabled": false
+      "enabled": true
     },
     "cordova": {}
   },
