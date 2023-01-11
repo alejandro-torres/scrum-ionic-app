@@ -1,0 +1,47 @@
+=>Empezar un nuevo proyecto
+ionic start [nombreDeProyecto]
+
+=>Probar el local
+ionic serve
+
+=> para quitar el plugin de la consola antes de generar los apk de produccion
+=> NOTA: no tiene porque haber plugins
+=> ionic cordova plugin rm cordova-plugin-console
+
+=> para instalar los builders
+=> error: Error: Unknown Argument: Platform [Error] An Error Occurred While Running Subprocess NG.
+=> ng add @ionic/cordova-builders
+
+=> para generar la release de android
+=> ionic cordova build --release android
+
+=> para instalar cordova
+=> npm i -g cordova
+
+=> para desactivar capacitadores
+=> ionic integrations disable capacitor
+
+=>generar la app con capacitor
+https://ionicframework.com/docs/cli/commands/capacitor-build
+ionic capacitor build android
+
+
+*************
+=>para generar el apk, si no se especifica crea por defecto el bundle que sirve para la playstore
+=>para generar el debug
+ionic cordova build android --prod --packageType=apk
+
+=>para generar el unsigned
+ionic cordova build android --prod --release --packageType=apk
+
+cordova build android --release – --keystore=android.keystore --storePassword=***** --alias=foo --password=***** --packageType=apk
+cordova build android --release -- -- --packageType=apk
+https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#using-flags
+https://ionicframework.com/docs/cli/commands/cordova-build
+****************
+
+=> para generar la key
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+=>para firmar la app
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name
