@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'definition',
+    redirectTo: 'manifesto',
     pathMatch: 'full'
   },
   {
@@ -30,7 +30,12 @@ const routes: Routes = [
   {
     path: 'artifacts',
     loadChildren: () => import('./pages/artifacts/artifacts.module').then( m => m.ArtifactsPageModule)
+  },
+  {
+    path: 'manifesto',
+    loadChildren: () => import('./pages/manifesto/manifesto.module').then( m => m.ManifestoPageModule)
   }
+
 
 
 
